@@ -3,7 +3,7 @@
 - **Spider experiment (Fig. 2E–L).** The `fig2*.py` scripts analyze ratings, choices, and hand movement during the in-person spider experiment.
 - **Online experiment (Fig. 3B–I).** The `fig3*.py` scripts analyze choices, ratings, reaction times, and questionnaire measures from the online information-seeking experiment.
 - **fMRI behavior (Fig. 4).** The first-level RSA scripts and the connectivity scripts read the fMRI participants' ratings, choices, and trial conditions to build their analysis inputs.
-- **fMRI RSA (Fig. 4).** The `fig4_analysis_rsa_*_firstlevel.py` scripts fit participant GLMs. The corresponding `*_secondlevel.py` scripts perform group analyses using participant maps from `result_*/`.
+- **fMRI RSA (Fig. 4).** The `fig4_analysis_rsa_*_firstlevel.py` scripts fit participant GLMs. The corresponding `*_secondlevel.py` scripts perform group analyses using participant beta maps.
 - **fMRI connectivity (Fig. 4).** The `fig4_connectivity_network_*.py` scripts analyze and plot the Story and Skip brain networks for curiosity, threat, and their interaction.
 
 ## Software
@@ -35,6 +35,4 @@ Download the inputs for your analysis from [Science Data Bank](https://doi.org/1
 
 ## MATLAB searchlight scripts
 
-`searchlight_r_matlab_voxel_s1_level.m` computes searchlight similarities from condition-level beta maps for the **S1 curiosity localizer** and writes them to `file_generated/searchlight_r_rsa_s1_level/`. `searchlight_r_matlab_voxel_s2_level.m` does the same for the **S2 threat localizer** and writes to `file_generated/searchlight_r_rsa_s2_level_subj/`. The Python first-level GLMs for S1 and S2 use trial-level searchlight arrays from Science Data Bank, in the two localizer folders listed above.
-
-The two S3 MATLAB scripts compute trial-level searchlight similarities for the clickbait task and shock period, respectively.
+`searchlight_r_matlab_voxel_s1_level.m` computes searchlight similarities from condition-level beta maps for the **S1 curiosity localizer** and writes them to `file_generated/searchlight_r_rsa_s1_level/`. `searchlight_r_matlab_voxel_s2_level.m` does the same for the **S2 threat localizer** and writes to `file_generated/searchlight_r_rsa_s2_level_subj/`. The two S3 MATLAB scripts compute trial-level searchlight similarities for the clickbait task and shock period, respectively. The Matlab codes are added here as reference. All these searchlight similarity maps could be downloaded from [Science Data Bank](https://doi.org/10.57760/sciencedb.0175h). 
